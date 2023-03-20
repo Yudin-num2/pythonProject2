@@ -129,5 +129,5 @@ class Volater:
             print(f'Нулевая волатильность: \n {self.zero_volatility}')
 
 
-volater = Volater(path=r'C:\Users\i.sysoev\PycharmProjects\pythonProject2\lesson_012\trades')
+volater = Volater(path='trades')
 volater.run()
