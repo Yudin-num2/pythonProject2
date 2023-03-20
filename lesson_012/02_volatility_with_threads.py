@@ -72,7 +72,7 @@ class Volater(threading.Thread):
 lock = threading.Lock()
 all_volatilitys = {}
 zero = {}
-path_to_directory = 'trades'
+path_to_directory = r'C:\Users\i.sysoev\PycharmProjects\pythonProject\lesson_012\trades'
 all_files = []
 
 @time_track
