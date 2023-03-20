@@ -103,7 +103,6 @@ class Volater:
         self.max = None
         self.min = None
 
-
     @time_track
     def run(self):
 
@@ -129,17 +128,6 @@ class Volater:
             print(f'Минимальная волатильность: \n {self.min}')
             print(f'Нулевая волатильность: \n {self.zero_volatility}')
 
-
-# volater_max = Volater(path='trades')
-# volater_min = Volater(path='trades')
-# volater_zero = Volater(path='trades')
-#
-# volater_max.start()
-# volater_min.start()
-# volater_zero.start()
-# volater_max.join()
-# volater_min.join()
-# volater_zero.join()
 
 volater = Volater(path=r'C:\Users\i.sysoev\PycharmProjects\pythonProject2\lesson_012\trades')
 volater.run()
