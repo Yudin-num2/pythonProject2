@@ -92,14 +92,13 @@ def time_track(func):
     return surrogate
 
 
-class Volater(Thread):
+class Volater:
 
     def __init__(self, path, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        # super().__init__(*args, **kwargs)
         self.path = path
         self.sorted_total_prices = []
         self.all_volatilitys = {}
-        self.dict_all_volatilitys = {}
         self.zero_volatility = {}
         self.max = None
         self.min = None
@@ -126,19 +125,21 @@ class Volater(Thread):
                     self.all_volatilitys[file] = volatility
                     self.max = sorted(self.all_volatilitys.items(), key=itemgetter(1))[-1:-4:-1]
                     self.min = sorted(self.all_volatilitys.items(), key=itemgetter(1))[0:3]
-            pprint(f'Максимальная волатильность: \n {self.max}')
-            pprint(f'Минимальная волатильность: \n {self.min}')
-            pprint(f'Нулевая волатильность: \n {self.zero_volatility}')
+            print(f'Максимальная волатильность: \n {self.max}')
+            print(f'Минимальная волатильность: \n {self.min}')
+            print(f'Нулевая волатильность: \n {self.zero_volatility}')
 
 
-volater_max = Volater(path='trades')
-volater_min = Volater(path='trades')
-volater_zero = Volater(path='trades')
+# volater_max = Volater(path='trades')
+# volater_min = Volater(path='trades')
+# volater_zero = Volater(path='trades')
+#
+# volater_max.start()
+# volater_min.start()
+# volater_zero.start()
+# volater_max.join()
+# volater_min.join()
+# volater_zero.join()
 
-volater_max.start()
-volater_min.start()
-volater_zero.start()
-volater_max.join()
-volater_min.join()
-volater_zero.join()
-
+volater = Volater(path=r'C:\Users\i.sysoev\PycharmProjects\pythonProject2\lesson_012\trades')
+volater.run()
