@@ -73,10 +73,12 @@
 #     def run(self):
 #         <обработка данных>
 import os
+import queue
 from operator import itemgetter
 from pprint import pprint
 import time
 from threading import Thread
+
 
 
 def time_track(func):
@@ -98,7 +100,7 @@ class Volater:
         # super().__init__(*args, **kwargs)
         self.path = path
         self.sorted_total_prices = []
-        self.all_volatilitys = {}
+        self.all_volatilitys = queue.Queue
         self.zero_volatility = {}
         self.max = None
         self.min = None
