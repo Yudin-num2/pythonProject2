@@ -83,7 +83,7 @@ for name in humans:
 boat.start()
 boat.join()
 
-print(f'лодка привезла {boat.catch}')
+print(f'лодка привезла {boat.catcher}')
 
 # Мы использовали очередь вида FIFO - first input, first output - первый вошел, первый вышел.
 # В модуле queue есть еще два вида очередей:
