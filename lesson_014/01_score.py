@@ -35,3 +35,6 @@
 # И, возможно, вам пригодится паттерн проектирования "Состояние",
 #   см https://clck.ru/Fudd8 и https://refactoring.guru/ru/design-patterns/state
 
+def get_score(game_result):
+    try:
+
